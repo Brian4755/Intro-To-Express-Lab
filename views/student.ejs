@@ -7,6 +7,17 @@
   <title>First Express App</title>
 </head>
 <body>
-  <h1>Home Page</h1>
+  <h1>Students</h1>
+  <ul>
+    <% students.forEach(student => { %>
+      <li>
+        <%= student.name %>
+        -
+        <%= student.grade %>
+        ---
+        <%= student.car ? 'Has a car' : 'No car' %> 
+      </li>
+    <% }) %>
+  </ul>
 </body>
 </html>

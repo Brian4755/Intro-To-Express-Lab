@@ -1,14 +1,16 @@
 import express from "express";
 
+import { students } from "./data/student-data.js";
+
 const app = express()
 
 app.set('view engine', 'ejs')
 
 app.get('/', function(req, res) {
-    res.render('home')
+  res.render('student', {
+    students: students
+  })
 })
-
-
 
 app.listen(3000, function() {
 
